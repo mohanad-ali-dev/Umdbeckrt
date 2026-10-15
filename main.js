@@ -19,7 +19,7 @@ window.addEventListener('scroll',function() {
 
 //كود تغيير صورة الدعاية كل 5 ثواني
 
-const imags = ["hero_1.png","hero_2.png"];
+const imags = ["hero_1.webp","hero_2.webp"];
 
 const imgElement = document.getElementById('slider');
 
