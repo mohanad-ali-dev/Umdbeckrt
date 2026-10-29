@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>صفحة التسجيل للسكن في مدينة أم دبيكرات </title>
+    <link rel="stylesheet" href="Login.css">
+    <link rel="stylesheet" href="./Icon/css/all.min.css">
+  </head>
+  <body>
+    <header>
+      
+        <!---- قسم الهيدر ------> 
+             
+      <section class="header-section">
+        <h1>أم دبيكرات </h1>
+        <img src="logo.jpg"  alt="شعار الصندوق القومي لرعاية الطلاب">
+        <nav>
+          <div class="mobile-menu" id="toggle-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </div>
+          <ul class="nav-list">
+            <li><a href="index.html">الرئيسية</a></li>
+            <li><a href="#contact">إتصل بنا </a></li>
+            <li><a href="#conditions">شروط التسجيل</a></li>
+          </ul>
+        </nav>
+      </section>
+    </header>
+    <main>
+      
+      <!----- قسم الهيرو --->
+
+      <section class="hero-section">
+        <h2>تسجيل الطلاب بمدينة أم دبيكرات الجامعية</h2>
+        <p>يسر إدارة الصندوق القومي لرعاية الطلاب أن ترحب بأبنائها الطلاب في أم دبيكرات</p>
+        <p>على الطلاب الراغبين في التقديم الالتزام بتجهيز المستندات المطلوبة واستكمال إجراءات التسجيل عبر البوابة الإلكترونية في الوقت المحدد.
+        مع تمنياتنا لجميع الطلاب بعام دراسي موفق</p>
+      </section>
+
+      <!--- قسم اللوائح والشروط --->
+
+      <section class="conditions-section" id="conditions">
+        <h3>شروط وضوابط التسجيل بمدينة أم دبيكرات الجامعية </h3>
+        <div class="conditions-box">
+          <ul>
+              <li>أن يكون المتقدم طالباً نظامياً بجامعة الإمام المهدي ومقيداً بإحدى كليات الجامعة.</li>
+              <li>أن يكون الطالب مسجلاً للعام الدراسي الحالي، مع إبراز إفادة تسجيل أو إيصال الرسوم.</li>
+              <li>ألا يكون من سكان مدينة كوستي أو المناطق القريبة التي تتوفر فيها مواصلات يومية.</li>
+              <li>أن يكون الطالب حسن السير والسلوك، وألا يكون قد صدرت بحقه أي عقوبة تأديبية سابقاً.</li>
+              <li>الالتزام التام بلوائح وقوانين السكن الداخلي، والمحافظة على ممتلكات المدينة.</li>
+              <li>إحضار صورتين فوتوغرافيتين حديثتين وصورة من البطاقة الجامعية والرقم الوطني.</li>
+              <li>دفع رسوم التسجيل والسكن المقررة مقدماً.</li>
+              <li>اجتياز الكشف الطبي وإحضار شهادة خلو من الأمراض المعدية إن طُلب ذلك.</li>
+              <li>ألا يكون الطالب قد تجاوز المدة القانونية للسكن (خريج أو مفصول أكاديمياً).</li>
+              <li>يمنع ممارسة أي نشاط سياسي أو تنظيمي داخل المدينة، والالتزام بمواعيد الدخول والخروج.</li>
+          </ul>
+        </div>
+        <div class="agree-box">
+          <input type="checkbox" id="agree" name="agree">
+          <label for="agree">أقر بأنني قرأت جميع الشروط</label>
+        </div>
+        <button  id="btn-box" disabled>متابعة التسجيل</button>
+      </section>
+
+      <!--- قسم التسجيل --->
+      
+      <section class="register-section">
+        <h3>إستمارة التسجيل </h3>
+        <p>يرجي إدخال البيانات المطلوبة منك لإكمال التسجيل </p>
+        <form method="post" action="file.php" id="form-one">
+          <fieldset class="field">
+            <legend class="leg">المرحلة الأولى - البيانات الشخصية</legend>
+            <label for="name">الإسم</label>
+            <input type="text" id="name" name="name" placeholder="أدخل الاسم رباعي " required>
+            <label for="phone">رقم الهاتف</label>
+            <input type="tel" id="phone" placeholder="أدخل رقم هاتفك" required>
+            <label for="phonef">رقم هاتف ولي الامر</label>
+            <input type="tel" id="phonef" placeholder="أدخل رقم هاتف ولي الأمر " required>
+            <label for="culty">الكلية</label>
+            <input type="text" id="culty" placeholder="أدخل إسم كليتك" required>
+            <label for="number">الرقم الجامعي</label>
+            <input type="number" id="number" placeholder="أدخل رقمك الجامعي" required>
+            <button type="submit" id="form-one-btn">متابعة التسجيل</button>
+          </fieldset>
+        </form>       
+        <form method="post" action="file.php" id="form-tow">
+          <fieldset class="fields">
+            <legend class="leg">المرحلة الثانية - رسوم التسجيل</legend>
+            <p>رسوم السنة السكنية في المدينة 200,000 ج.س مدة السنة 6 شهور</p>
+            <p>يتم الدفع عبر بنك فيصل الإسلامي (فوري) في رقم الحساب ادناه</p>
+            <p>رقم الحساب -87654321 - بإسم الصندوق القومي لرعاية الطلاب </p>
+            <p>يرجى كتابة تعليق باسم الطالب في اشعار الدفع وإرفاق الاشعار للمراجعة</p>
+            <label for="file" id="labell">أرفق الإشعار هنا <i class="fas fa-cloud-arrow-up"></i></label>
+           <input type="file" id="file" value="أرفق إشعار الدفع هنا " required>
+            <button type="submit" id="form-tow-btn">إرسال الطلب</button>
+          </fieldset>
+        </form>
+      </section>
+        <div class="alert-overlay" id="overlay">
+          <div class="alert-box">
+            <h4>رسالة تأكيد </h4>
+            <p>تم إرسال طلبك بنجاح <i class="fas fa-check-circle"></i></p>
+            <p>يرجى إحضار صورة فتوغرافية لإستلام بطاقة سكنية</p>
+            <button id="alert-btn">إغلاق </button>
+          </div>
+        </div>         
+    </main>
+             
+        <!---- قسم معلومات الاتصال ---->  
+          
+    <footer class="contact-section" id="contact"
+    >
+      <h2>إتصل بنا</h2>
+      
+      <div class="securty">
+        <a href="https://www.google.com">الصندوق القومي لرعاية الطلاب</a>
+        <a href="https://www.google.com">سياسة الخصوصية</a>
+        <a href="https://www.google.com">البنود والأحكام</a>
+        <a href="https://www.google.com/maps?q=13.157234,32.638399" target="_blank">موقعنا كوستي - القوز </a>
+      </div>
+      <div class="contact">
+        <p>تواصل معنا</p>
+        <a href="tel://+249965058898"><i class="fas fa-phone"></i></a>
+        <a href="mailto://mohanad.ali.adam123@gmail.com"><i class="fas fa-envelope"></i></a>
+        <a href="https://wa.me/249965058898" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://facebook.com/Mohanad.Ali.Adam" target="_blank"><i class="fab fa-facebook"></i></a>
+      </div>  
+      <p class="last">كل الحقوق محفوظة أم دبيكرات 2026©</p>
+    </footer>
+    <script src="Login.js"></script>
+  </body>
+</html>

@@ -19,7 +19,7 @@ window.addEventListener('scroll',function() {
 
 //كود تغيير صورة الدعاية كل 5 ثواني
 
-const imags = ["hero_1.webp","hero_2.webp"];
+const imags = ["hero_1.png","hero_2.png"];
 
 const imgElement = document.getElementById('slider');
 
@@ -62,9 +62,6 @@ radioChecked.forEach( radio => {
 
 const messageComp = document.getElementById('message-comp');
 const messageSugg = document.getElementById('message-sugg');
-const inputOn1 = formOne.querySelectorAll('input,textarea');
-const selectOn = formOne.querySelector('select');
-const inputOn2 = formTow.querySelectorAll('input,textarea');
 
 
 formOne.onsubmit = (event) => {
@@ -73,8 +70,8 @@ formOne.onsubmit = (event) => {
 
   setTimeout(() => {
 
-    messageComp.textContent = '« تم إرسال الشكوى بنجاح »';
-    formOne.reset()
+    messageComp.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
   },1500);
 };
 
@@ -84,19 +81,20 @@ formTow.onsubmit = (event) => {
 
   setTimeout(() => {
    
-    messageSugg.textContent = '« تم إرسال الإقتراح بنجاح »';
-    formTow.reset()
+    messageSugg.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
   },1500);
   
 };
 
-inputOn1.forEach(input => {
-    input.addEventListener('input',() => {
-      messageComp.textContent = "";});});
-  
-selectOn.addEventListener('change',() => {
-  messageComp.textContent = "";});
+function closeComp() {
 
-inputOn2.forEach(input => {
-    input.addEventListener('input', () => {
-      messageSugg.textContent = ""; });});
+  messageComp.style.display = 'none';
+  document.body.style.overflow = '',
+  formOne.reset()
+}
+function closeSugg() {
+  messageSugg.style.display = 'none';
+  document.body.style.overflow = '';
+  formTow.reset()
+}

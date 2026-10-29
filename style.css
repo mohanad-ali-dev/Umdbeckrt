@@ -2,6 +2,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+html {
   scroll-behavior: smooth;
 }
 body {
@@ -63,6 +65,12 @@ p {
 .shrink {
   padding: clamp(5px,3vw,10px) clamp(10px,3vw,20px);
   } 
+.shrink h1 {
+  font-size: clamp(28px,3vw,36px);
+}
+.shrink img {
+  width: 8%;
+}
 .nav-list {
   display: none;
   list-style: none;
@@ -329,6 +337,7 @@ summary {
   border-radius: 8px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   border: 1px solid #1a0f11;
+  margin-top: 20px;
 }
 #complaint button:hover {
   transform: translateY(-7px);
@@ -372,23 +381,46 @@ summary {
   border-radius: 8px;
   border: 1px solid #1a0f11;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  margin-top: 20px;
 }
 #suggestion button:hover {
   transform: translateY(-7px);
   box-shadow: 0 0 15px rgba(0,0,0,0.5);
 }
-#message-comp {
-  margin: clamp(10px,3vw,20px);
-  color: #10800b;
-  font-weight: 900;
-  text-align: center;
+.alert-overlay {
+  display: none;
+  background: rgba(0,0,0,0.5);
+  inset: 0;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  gap: 40px;
 }
-#message-sugg {
-  margin: clamp(10px,3vw,20px);
-  color: #10800b;
-  font-weight: 900;
+.alert-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  background-color: #fff;
+  padding: 10px;
+  color: #1a0f11;
   text-align: center;
+  border-radius: 16px;
+  animation: pop 0.2s ease;
+  width: 90%;
+  max-width: 320px;
 }
+.alert-box button {
+  width: 50%;
+  padding: 10px;
+  border-radius: 8px;
+  background-color: #1a0f11;
+  color: #fff;
+  margin: clamp(20px,3vw,40px) 0;
+  border: 1px solid #1a0f11;
+}
+  
 
      /*  <-------- قسم معلومات الاتصال وتذييل الصفحة -------->  */
 
